@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function abc(data) {
+      console.log(data);
+
+    }
+    abc('hello');
+    abc(5);
+
+    //두개의 숫자를 파라미터로 통해서 받은 다음 두개값을 뺸 값을 콘솔로 출력한 함수 제작
+    function loem(num1, num2) {
+      console.log(num1 - num2);
+    }
+    loem(5, 3);
+
+    function family(num1, num2) {
+      //패밀리함수가 실행되면 그 인수로 실행되는 두개의 값을 더해서 출력해주는 현상만 발생하고 남아있는 값은 없다
+      console.log(num1 * num2);
+      //return 두개 더한값을 외부로 내보내고 이으니 콘솔이 끝난후에도 패밀리 함수에 호출된 위치에는 물리적으로 값이 남아있게 됨 
+      return num1 + num2;
+    }
+
+    const result = family(5, 3);
+    console.log(result);
+  </script>
+</body>
+
+</html>
