@@ -31,6 +31,43 @@
 
     const result = family(5, 3);
     console.log(result);
+
+    /*
+    배열반복 (forEach.map)
+    
+    
+    callback:함수에 인수로 전달되는 함수
+    high order finction
+    배열.foreach(함수);
+    반복기능만 있음
+    유사배열도 반복가능(Dom요소 반복가능)
+
+    배열map(함수):
+    --반복기능 추가로 기존 배열값을 복사해서 리턴
+    --순수배열만 반복가능(DOM요소 반복 불가능)
+    */
+    const colors = ['red', 'blue', 'black'];
+
+    colors.forEach((data, index) => {
+      console.log('첫번째 인수활용', data);
+      console.log('두번재 인수활용', colors[index])
+      console.log('-------')
+    })
+    //반복기능만 있고 기존 배열 복사기능이 없음
+
+    const newcolors = colors.forEach((data, index) => {
+      return data + index
+    })
+    //반복기능과 더불어 기존 배열 복사기능까지 추가됨
+    const newcolors2 = colors.map((data, index) => {
+      return data + index
+    })
+    console.log(newcolors);
+
+    console.log(newcolors2);
+
+
+
   </script>
 </body>
 
