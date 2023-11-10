@@ -9,38 +9,33 @@
 
 <body>
   <script>
-    const person1 = {
-      name: 'andy',
-      age: 20,
-      address: 'seoul'
-    }
-
-    const person2 = { ...person1 };
-    person2.age = 22;
-    person2.address = 'busan';
-
-    console.log(person1);
-    console.log(person2);
+    const [color1, color2, color3] = ['red', 'green', 'blue'];
+    console.log(color1);
+    console.log(color2);
+    console.log(color3);
 
 
-    //작년 회원가입정보
     const student1 = {
       name: 'andy',
-      age: 20,
-    }
-    //올해 회원가입 정보
-    const extrainfo = {
-      name: 'andy',
-      age: 21,
-      hobby: 'game'
-    }
+      age: '20',
+      isfemale: false
+    };
 
-    //작년회원가입 정보값을 유지하면서 올해회원가입 정보값을 업데이트한 새로운 데이터 추가
-    //전개연산자를 이용하면 원본을 유지하면서 기존 2개의 객체값을 합칠때 유용
-    const newstudent = { ...student1, ...extrainfo };
+    const { name, age, isfemale } = student1;
+    console.log(name);
+    console.log(age);
+    console.log(isfemale);
 
-    console.log('newstudent', 'newstudent1');
+    /*
+    비구조할당,구조분해할당
+    -객체나 배열의 기존 구조를 분해해서 각각의 값으로 재할당
+    -배열은 비구조화할당시 변수망 임의로 지정가능
+    -객체는 무조건 propterty key값으로만 변수명 지정
+    */
+
   </script>
+
+
 </body>
 
 </html>
